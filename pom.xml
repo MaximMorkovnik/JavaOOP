@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gmail.morkovnik.maxim</groupId>
-    <artifactId>java-start</artifactId>
+    <artifactId>java-OOP</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Java START</name>
+    <name>Java OOP</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
