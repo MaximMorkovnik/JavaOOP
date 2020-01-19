@@ -1,7 +1,7 @@
 /**
- * Напишите программу, которая скопирует файлы с заранее
- * определенным расширением(например, только doc) из
- * каталога источника в каталог приемник.
+ * РќР°РїРёС€РёС‚Рµ РїСЂРѕРіСЂР°РјРјСѓ, РєРѕС‚РѕСЂР°СЏ СЃРєРѕРїРёСЂСѓРµС‚ С„Р°Р№Р»С‹ СЃ Р·Р°СЂР°РЅРµРµ
+ * РѕРїСЂРµРґРµР»РµРЅРЅС‹Рј СЂР°СЃС€РёСЂРµРЅРёРµРј(РЅР°РїСЂРёРјРµСЂ, С‚РѕР»СЊРєРѕ doc) РёР·
+ * РєР°С‚Р°Р»РѕРіР° РёСЃС‚РѕС‡РЅРёРєР° РІ РєР°С‚Р°Р»РѕРі РїСЂРёРµРјРЅРёРє.
  */
 package com.gmail.morkovnik.maxim;
 
@@ -17,7 +17,7 @@ public class FileCopy {
 
 	public static void copyFile(File in, File out) throws IOException {
 		if (in == null || out == null) {
-			throw new IllegalArgumentException("Null file pointer"); // проверили коректность входных параметров
+			throw new IllegalArgumentException("Null file pointer"); // РїСЂРѕРІРµСЂРёР»Рё РєРѕСЂРµРєС‚РЅРѕСЃС‚СЊ РІС…РѕРґРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ
 		}
 		try (InputStream is = new FileInputStream(in); OutputStream os = new FileOutputStream(out)) {
 
