@@ -19,7 +19,7 @@ public class Stack {
 	}
 
 	/**
-	 * Конструктор, принимающий стек BlackList
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, РїСЂРёРЅРёРјР°СЋС‰РёР№ СЃС‚РµРє BlackList
 	 * 
 	 * @param blackList <code>BlackList</code>
 	 */
@@ -29,7 +29,7 @@ public class Stack {
 	}
 
 	/**
-	 * Получает данные blackList
+	 * РџРѕР»СѓС‡Р°РµС‚ РґР°РЅРЅС‹Рµ blackList
 	 * 
 	 * @return <code>BlackList</code>
 	 */
@@ -38,7 +38,7 @@ public class Stack {
 	}
 
 	/**
-	 * Вводит данные blackList
+	 * Р’РІРѕРґРёС‚ РґР°РЅРЅС‹Рµ blackList
 	 * 
 	 * @param blackList <code>BlackList</code>
 	 */
@@ -47,7 +47,7 @@ public class Stack {
 	}
 
 	/**
-	 * Расширяет массив
+	 * Р Р°СЃС€РёСЂСЏРµС‚ РјР°СЃСЃРёРІ
 	 */
 	private void resizeUp() {
 		Object[] temp = new Object[(this.stackArray.length * 7) / 4];
@@ -56,7 +56,7 @@ public class Stack {
 	}
 
 	/**
-	 * Метод добавления элемента в стек, если он не попадает в черный список
+	 * РњРµС‚РѕРґ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РІ СЃС‚РµРє, РµСЃР»Рё РѕРЅ РЅРµ РїРѕРїР°РґР°РµС‚ РІ С‡РµСЂРЅС‹Р№ СЃРїРёСЃРѕРє
 	 * 
 	 * @param obj <code>Object</code>
 	 */
@@ -77,7 +77,7 @@ public class Stack {
 	}
 
 	/**
-	 * Получает последний элемент стека и удаляет его
+	 * РџРѕР»СѓС‡Р°РµС‚ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ СЃС‚РµРєР° Рё СѓРґР°Р»СЏРµС‚ РµРіРѕ
 	 * 
 	 * @return <code>Object</code>
 	 */
@@ -91,7 +91,7 @@ public class Stack {
 	}
 
 	/**
-	 * Получает последний элемент стека
+	 * РџРѕР»СѓС‡Р°РµС‚ РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚ СЃС‚РµРєР°
 	 * 
 	 * @return <code>Object</code>
 	 */
