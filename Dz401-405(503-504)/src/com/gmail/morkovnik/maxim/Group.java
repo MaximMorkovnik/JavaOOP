@@ -270,5 +270,5 @@ public class Group implements Voencom {
 			System.out.println("ERROR");
 		}
 		return groupFromFile;
-	}
+	} 
 }
