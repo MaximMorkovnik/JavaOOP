@@ -40,12 +40,12 @@ public class Group implements Voencom {
 	}
 
 	public void addStudent(Student a) throws MyException {
-		if (a.getGroup() == null) { // проверяем не учится ли этот студент уже в какой-то группе
-			boolean isAdd = false; // успешно ли добавлен студент?
+		if (a.getGroup() == null) { // РїСЂРѕРІРµСЂСЏРµРј РЅРµ СѓС‡РёС‚СЃСЏ Р»Рё СЌС‚РѕС‚ СЃС‚СѓРґРµРЅС‚ СѓР¶Рµ РІ РєР°РєРѕР№-С‚Рѕ РіСЂСѓРїРїРµ
+			boolean isAdd = false; // СѓСЃРїРµС€РЅРѕ Р»Рё РґРѕР±Р°РІР»РµРЅ СЃС‚СѓРґРµРЅС‚?
 			for (int i = 0; i < s.length; i++) {
-				if (s[i] == null) { // если место в группе свободно
-					s[i] = a; // добавляем на свободное место
-					a.setGroup(this); // указываем что студент теперь учится в этой группе
+				if (s[i] == null) { // РµСЃР»Рё РјРµСЃС‚Рѕ РІ РіСЂСѓРїРїРµ СЃРІРѕР±РѕРґРЅРѕ
+					s[i] = a; // РґРѕР±Р°РІР»СЏРµРј РЅР° СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ
+					a.setGroup(this); // СѓРєР°Р·С‹РІР°РµРј С‡С‚Рѕ СЃС‚СѓРґРµРЅС‚ С‚РµРїРµСЂСЊ СѓС‡РёС‚СЃСЏ РІ СЌС‚РѕР№ РіСЂСѓРїРїРµ
 					System.out.println("Student " + a.getSurname() + " is added to the group: " + groupName);
 					isAdd = true;
 					break;
@@ -53,36 +53,36 @@ public class Group implements Voencom {
 			}
 			try {
 				if (!isAdd) {
-					throw new MyException(); // если студет не добавлен, так как нет места
+					throw new MyException(); // РµСЃР»Рё СЃС‚СѓРґРµС‚ РЅРµ РґРѕР±Р°РІР»РµРЅ, С‚Р°Рє РєР°Рє РЅРµС‚ РјРµСЃС‚Р°
 				}
 			} catch (MyException e) {
 				System.out.println("The group is full ");
 			}
-			// если этот студент уже есть в какойто группе
+			// РµСЃР»Рё СЌС‚РѕС‚ СЃС‚СѓРґРµРЅС‚ СѓР¶Рµ РµСЃС‚СЊ РІ РєР°РєРѕР№С‚Рѕ РіСЂСѓРїРїРµ
 		} else
 			System.out.println(
 					"Student " + a.getSurname() + " already studying in group: " + a.getGroup().getGroupName());
 	}
 
-// throw new IllegalArgumentException("Null student"); // исключение так как не корректное значение
-// return; // закончить работу метода
-// throw new MyException(); // собственное исключение при переполнении и обработка его
+// throw new IllegalArgumentException("Null student"); // РёСЃРєР»СЋС‡РµРЅРёРµ С‚Р°Рє РєР°Рє РЅРµ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+// return; // Р·Р°РєРѕРЅС‡РёС‚СЊ СЂР°Р±РѕС‚Сѓ РјРµС‚РѕРґР°
+// throw new MyException(); // СЃРѕР±СЃС‚РІРµРЅРЅРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ РїСЂРё РїРµСЂРµРїРѕР»РЅРµРЅРёРё Рё РѕР±СЂР°Р±РѕС‚РєР° РµРіРѕ
 
-	public void addStudentInteractive() throws MyException { // для интерактивного добавления студента, тоже метод, но
-																// без
-		// параметра (студента создадим в процессе)
-		int freePlace = -1; // cюда запишем номер свободного места
-		for (int i = 0; i < s.length; i++) { // ищем есть ли свободное место
-			if (s[i] == null) { // если место в группе свободно
+	public void addStudentInteractive() throws MyException { // РґР»СЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРіРѕ РґРѕР±Р°РІР»РµРЅРёСЏ СЃС‚СѓРґРµРЅС‚Р°, С‚РѕР¶Рµ РјРµС‚РѕРґ, РЅРѕ
+																// Р±РµР·
+		// РїР°СЂР°РјРµС‚СЂР° (СЃС‚СѓРґРµРЅС‚Р° СЃРѕР·РґР°РґРёРј РІ РїСЂРѕС†РµСЃСЃРµ)
+		int freePlace = -1; // cСЋРґР° Р·Р°РїРёС€РµРј РЅРѕРјРµСЂ СЃРІРѕР±РѕРґРЅРѕРіРѕ РјРµСЃС‚Р°
+		for (int i = 0; i < s.length; i++) { // РёС‰РµРј РµСЃС‚СЊ Р»Рё СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ
+			if (s[i] == null) { // РµСЃР»Рё РјРµСЃС‚Рѕ РІ РіСЂСѓРїРїРµ СЃРІРѕР±РѕРґРЅРѕ
 				freePlace = i;
 				System.out.println("Free place was found in group " + groupName + ". Please enter student info ");
 				break;
 			}
 		}
-		if (freePlace < 0) { // если места не нашлось
+		if (freePlace < 0) { // РµСЃР»Рё РјРµСЃС‚Р° РЅРµ РЅР°С€Р»РѕСЃСЊ
 			System.out.println("The group is full");
-		} else { // если нашли место
-			while (true) { // для повтора попытки добавления студента если был некорректный ввод данных
+		} else { // РµСЃР»Рё РЅР°С€Р»Рё РјРµСЃС‚Рѕ
+			while (true) { // РґР»СЏ РїРѕРІС‚РѕСЂР° РїРѕРїС‹С‚РєРё РґРѕР±Р°РІР»РµРЅРёСЏ СЃС‚СѓРґРµРЅС‚Р° РµСЃР»Рё Р±С‹Р» РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ РґР°РЅРЅС‹С…
 				Student st = new Student();
 				BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 				try {
@@ -96,20 +96,20 @@ public class Group implements Voencom {
 					st.setCourse(Integer.parseInt(reader.readLine()));
 					System.out.println("Please enter student progress (int 1-10000):");
 					st.setProgress(Integer.parseInt(reader.readLine()));
-					s[freePlace] = st; // добавляем на свободное место
-					st.setGroup(this); // указываем что студент теперь учится в этой группе
+					s[freePlace] = st; // РґРѕР±Р°РІР»СЏРµРј РЅР° СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ
+					st.setGroup(this); // СѓРєР°Р·С‹РІР°РµРј С‡С‚Рѕ СЃС‚СѓРґРµРЅС‚ С‚РµРїРµСЂСЊ СѓС‡РёС‚СЃСЏ РІ СЌС‚РѕР№ РіСЂСѓРїРїРµ
 					System.out.println("Student " + st.getSurname() + " is added to the group: " + groupName);
 					break;
-				} catch (Exception e) { // если ввели некоректные данные предлагаем попробовать еще раз
+				} catch (Exception e) { // РµСЃР»Рё РІРІРµР»Рё РЅРµРєРѕСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ РїСЂРµРґР»Р°РіР°РµРј РїРѕРїСЂРѕР±РѕРІР°С‚СЊ РµС‰Рµ СЂР°Р·
 					System.out.println("Invalid enter, student is not added, try again? (y / n):");
 					try {
 						if (reader.readLine().equals("y")) {
 							System.out.println("Please enter student data:");
-						} else { // при любом вводе отличном от "y" заканчиваем попытки добавить студента
+						} else { // РїСЂРё Р»СЋР±РѕРј РІРІРѕРґРµ РѕС‚Р»РёС‡РЅРѕРј РѕС‚ "y" Р·Р°РєР°РЅС‡РёРІР°РµРј РїРѕРїС‹С‚РєРё РґРѕР±Р°РІРёС‚СЊ СЃС‚СѓРґРµРЅС‚Р°
 							break;
 						}
-					} catch (Exception x) { // любой ввод будет корректным, но reader.readLine() считается опасным потому
-											// обработаем
+					} catch (Exception x) { // Р»СЋР±РѕР№ РІРІРѕРґ Р±СѓРґРµС‚ РєРѕСЂСЂРµРєС‚РЅС‹Рј, РЅРѕ reader.readLine() СЃС‡РёС‚Р°РµС‚СЃСЏ РѕРїР°СЃРЅС‹Рј РїРѕС‚РѕРјСѓ
+											// РѕР±СЂР°Р±РѕС‚Р°РµРј
 						System.out.println("Invalid enter");
 						break;
 					}
@@ -174,8 +174,8 @@ public class Group implements Voencom {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Group: ").append(System.lineSeparator()); // System.lineSeparator() возвращает строку с
-																// символами перевода строки ("\n" Unix,
+		sb.append("Group: ").append(System.lineSeparator()); // System.lineSeparator() РІРѕР·РІСЂР°С‰Р°РµС‚ СЃС‚СЂРѕРєСѓ СЃ
+																// СЃРёРјРІРѕР»Р°РјРё РїРµСЂРµРІРѕРґР° СЃС‚СЂРѕРєРё ("\n" Unix,
 																// "\r\n"
 																// Windows)
 		int i = 0;
@@ -197,7 +197,7 @@ public class Group implements Voencom {
 				n += 1;
 			}
 		}
-		Student[] recruterArray = new Student[n]; // n - количество студентов в массиве
+		Student[] recruterArray = new Student[n]; // n - РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СѓРґРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ
 		int i = 0;
 		for (Student student : this.s) {
 			if (student != null && student.getAge() >= 18) {
