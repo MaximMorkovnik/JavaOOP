@@ -110,8 +110,8 @@ public class Group implements Voencom, Serializable {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Group: ").append(System.lineSeparator()); // System.lineSeparator() âîçâðàùàåò ñòðîêó ñ
-																// ñèìâîëàìè ïåðåâîäà ñòðîêè ("\n" Unix,
+		sb.append("Group: ").append(System.lineSeparator()); // System.lineSeparator() Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ñ
+																// ÑÐ¸Ð¼Ð²Ð¾Ð»Ð°Ð¼Ð¸ Ð¿ÐµÑ€ÐµÐ²Ð¾Ð´Ð° ÑÑ‚Ñ€Ð¾ÐºÐ¸ ("\n" Unix,
 																// "\r\n"
 																// Windows)
 		int i = 0;
@@ -133,7 +133,7 @@ public class Group implements Voencom, Serializable {
 				n += 1;
 			}
 		}
-		Student[] recruterArray = new Student[n]; // n - êîëè÷åñòâî ñòóäåíòîâ â ìàññèâå
+		Student[] recruterArray = new Student[n]; // n - ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð¾Ð² Ð² Ð¼Ð°ÑÑÐ¸Ð²Ðµ
 		int i = 0;
 		for (Student student : this.s) {
 			if (student != null && student.getAge() >= 18) {
